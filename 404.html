@@ -1,0 +1,28 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en-GB" style="height: 100%">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&amp;display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+    <meta name="description" content="Backtick Conlang Reference - Table of Contents">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+    <title>404 - File not Found</title>
+</head>
+<body class="main" style="flex-direction: column; align-items: center; justify-content: center; min-height: 100%; counter-reset: chapter;">
+    <chapter-select>
+        <div style="margin: 5% auto;font-size: 150%;color: #146625;">
+            <h1>404 - File not Found</h1>
+            <p>This file does not exist. Or rather, not yet?</p>
+            <p>If a link led you here, this page has yet to be read from the sky.</p>
+            <p>Let the stars guide you back:</p>
+            <p><a href="{{ site.baseurl }}/" style="transform: initial;">Return to Table of Contents.</a></p>
+            <p><a id="historyBack" onclick="history.back();" style="transform: initial; cursor: pointer; display: none;">Return to where you came from.</a></p>
+        </div>
+      </chapter-select>
+      <script>
+          document.getElementById("historyBack").style.removeProperty("display");
+      </script>
+</body>
