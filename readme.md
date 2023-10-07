@@ -2,7 +2,7 @@
 Just a small conlang for a project with a few friends.
 
 # Usage
-You can browse the site [here](atrufulgium.github.io/backtickconlang). There's a built-in dictionary and you can toggle the readings.
+You can browse the site [here](https://atrufulgium.github.io/backtickconlang). There's a built-in dictionary and you can toggle the readings.
 
 When modifying pages, please consider [github pages' limits](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages). In particular, there are two relevant major points:
 * **Do not upload any large assets**, and if necessary, resort to hacks. For instance, most images are svg, and the few background pngs are heavily blurred, so they do not need to be large.
