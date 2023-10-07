@@ -1,0 +1,19 @@
+<saia-dict id="saia-dict">
+    <mobile-toggle id="mobile-dict-close" onClick="toggleDictionary()"></mobile-toggle>
+    Dictionary
+    <input type="text" placeholder="Type or paste to search" id="search-input" oninput="search()">
+    <div id="dict-scroll-anchor"></div>
+    <word-meta id="result-count"></word-meta>
+    <search-results id="search-results">
+    </search-results>
+    <flex-filler></flex-filler>
+    <dict-nav>
+        <button onclick="setPage(1)">First</button>
+        <button onclick="setPage(page-1)">Prev</button>
+        <span id="page-counter">1/1</span>
+        <button onclick="setPage(page+1)">Next</button>
+        <button onclick="setPage(Infinity)">Last</button>
+    </dict-nav>
+</saia-dict>
+<mobile-toggle id="mobile-dict-toggle" onClick="toggleDictionary()"></mobile-toggle>
+<mobile-toggle id="mobile-ruby-toggle" onClick="toggleRuby()"></mobile-toggle>

@@ -1,0 +1,575 @@
+@font-face {
+    font-family: 'saia';
+    src: url("../font/saia.ttf");
+}
+conlang-saia {
+    font-family: 'saia';
+}
+conlang-saia rt {
+    font-family: initial;
+}
+
+@font-face {
+    font-family: 'Different One';
+    src: local('Segoe UI');
+    unicode-range: U+31;
+}
+
+html {
+    scrollbar-color: #d9a659 #ffe3b8;
+}
+
+body {
+    margin: 0;
+    font-family: 'Different One', 'El Messiri', sans-serif;
+    overflow-x: clip;
+}
+
+site-header {
+    width: 100%;
+    display: block;
+    background-size: cover;
+}
+site-header>div {
+    width: 100%;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    border-bottom: #d9a659 solid 4px;
+    background-color: #ffe3b840;
+    color: #ffe3b8;
+    font-size: 80px;
+}
+site-header, site-header>div {
+    min-height: 150px;
+}
+
+nav, saia-dict {
+    background-color: #ffe3b8;
+    border: #d9a659 solid 4px;
+    border-left: initial;
+    padding: 10px;
+    color: #d9a659;
+    font-size: 24px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: sticky;
+    width: 244px;
+    top: 5vh;
+    max-height: calc(95vh - 200px);
+    margin: 4px;
+    margin-left: 0;
+    z-index: 10;
+    transition: transform 250ms, margin 250ms;
+}
+nav summary, nav>toggle-ruby, nav>toggle-dict {
+    font-size: 24px;
+    text-decoration: none;
+    display: block;
+    border-image-source: url("../resources/nav_url_border.svg");
+    border-image-slice: 0% 49% 40% 50%;
+    border-image-width: auto;
+    border-image-outset: 8px 12px;
+    border-image-repeat: round;
+    margin: 10px 20px 10px 5px;
+    padding: 0 0 0 15px;
+    width: 200px;
+    color: #146625;
+    cursor: pointer;
+    user-select: none;
+}
+nav details {
+    font-size: 18px;
+}
+nav details a, nav>a {
+    display: block;
+    margin-bottom: -2px;
+    color: #146625;
+    padding-left: 10px;
+    font-size: 18px;
+}
+nav details a:visited {
+    color: purple;
+}
+nav details a[current-page] {
+    border: 1px solid #d9a659;
+    border-right-width: 8px;
+}
+nav>details:nth-child(3n+1)>summary, nav>toggle-dict {
+    border-image-source: url("../resources/nav_url_border_2.svg");
+}
+nav>details:nth-child(3n+2)>summary, nav>toggle-ruby {
+    border-image-source: url("../resources/nav_url_border_3.svg");
+}
+toggle-ruby:hover, toggle-dict:hover {
+    cursor: pointer;
+    user-select: none;
+}
+
+flex-filler {
+    display: block;
+    flex-grow: 1;
+}
+
+saia-dict {
+    width: 243px;
+    border: #d9a659 solid 4px;
+    border-right-width: 1px;
+    margin: 4px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+saia-dict word-header {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+saia-dict word-header conlang-saia {
+    font-size: 24px;
+}
+
+saia-dict>input {
+    font-family: inherit;
+    font-size: 14px;
+    margin-bottom: 8px;
+    border: 1px solid #d9a659;
+}
+
+saia-dict button {
+    border: 1px solid #d9a659;
+    font-family: inherit;
+    font-size: 14px;
+    transform: translateY(-4px);
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+search-results {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 110%;
+}
+
+word-explanation {
+    display: block;
+    color: #202;
+}
+
+word-meta {
+    font-style: italic;
+    color: #d9a659;
+    font-size: 16px;
+    line-height: 110%;
+}
+
+search-results mark {
+    color: inherit;
+    background-color: inherit;
+    filter: invert(.33);
+    text-decoration: underline;
+}
+
+dict-nav {
+    text-align: center;
+    white-space: nowrap;
+}
+
+mobile-toggle {
+    display: none;
+}
+
+@media all and (max-width: 1155px) {
+    /* Make the nav a popout instead */
+    nav {
+        position: fixed;
+        top: 2vh;
+        margin-left: -300px;
+        transform: translate(0);
+        height: calc(98vh - 200px);
+        max-height: calc(98vh - 200px);
+    }
+    nav[open-ele] {
+        transform: translate(300px);
+    }
+
+    saia-dict {
+        margin-left: -296px;
+        transform: translate(300px);
+        transition: transform 250ms;
+
+        position: fixed;
+        top: 2vh;
+        right: 0px;
+        height: calc(98vh - 92px);
+        max-height: calc(98vh - 92px);
+    }
+    saia-dict[open-ele] {
+        transform: translate(0);
+    }
+
+    mobile-toggle {
+        display: block;
+        position: fixed;
+        background-color: #ffe3b8;
+        border: #d9a659 solid 4px;
+        width: 42px;
+        height: 42px;
+        background-size: contain;
+        cursor: pointer;
+        z-index: 20;
+    }
+    #mobile-nav-toggle {
+        bottom: 6px;
+        left: 6px;
+        background-image: url(../resources/mobile_toc_icon.svg);
+    }
+    #mobile-dict-toggle {
+        bottom: 60px;
+        left: 6px;
+        background-image: url(../resources/mobile_dict_icon.svg);
+    }
+    #mobile-ruby-toggle {
+        bottom: 114px;
+        left: 6px;
+        background-image: url(../resources/mobile_ruby_icon.svg);
+    }
+    #mobile-dict-close {
+        position: absolute;
+        right: -4px;
+        top: -4px;
+        background-image: url(../resources/mobile_close_icon.svg);
+    }
+}
+
+.main {
+    background-image: url("../resources/background.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    display: flex;
+    min-height: calc(100vh - 154px);
+}
+
+p {
+    margin: 10px 0;
+}
+article {
+    background-color: #bee9bee0;
+    width: 67%;
+    max-width: 750px;
+    min-height: 75%;
+    margin: auto;
+    margin-top: 4px;
+    margin-bottom: 50px;
+    padding: 40px;
+    padding-top: 25px;
+    border: 4px solid #146625;
+    font-size: 16px;
+    line-height: 140%;
+    color: #202;
+}
+article a {
+    color: #146625;
+}
+article a:visited {
+    color: purple;
+}
+article img {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 67%;
+}
+
+article>h1 {
+    font-size: 24px;
+    letter-spacing: -0.3px;
+    text-shadow: 0px 2px 2px #14662580;
+    margin-top: 30px;
+    margin-left: 10px;
+    padding: 10px;
+    /* Make the text not intersect with the fancy ::before by newlining */
+    text-indent: -80px;
+    padding-left: 80px;
+}
+article>h1:first-of-type {
+    margin-top: 0px;
+}
+article>h1::before {
+    content: url("../resources/section_header.svg");
+    width: 0px;
+    display: inline-block;
+    transform: scale(.5) translate(25px,110px);
+    margin-top: -85px;
+    pointer-events: none;
+}
+article>h1:nth-of-type(even)::before {
+    content: url("../resources/section_header_2.svg");
+}
+
+article conlang-saia {
+    font-size: 130%;
+}
+
+blockquote {
+    margin-left: 0px;
+    margin-right: 0px;
+    border-left: 4px solid #146625;
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    background-color: #bee9be;
+    /* This somehow makes it respect floats */
+    display: flex;
+    flex-direction: column;
+}
+
+blockquote p:first-child {
+    margin-top: 0;
+}
+
+blockquote[example-blockquote] p:first-child, blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote[example-blockquote] {
+    border-left-color: #eb29a0;
+    background-color: #f9dede;
+}
+
+code {
+    background-color: #ffe3b8;
+    padding: 3px;
+    border: 1px solid #d9a659;
+    border-radius: 6px;
+    font-family: consolas;
+    color: #146625;
+}
+
+article aside {
+    background-color: #ffe3b8;
+    border: 4px solid #d9a659;
+    float: right;
+    width: 267px;
+    margin-top: -12px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    padding: 3px 2px;
+}
+article aside img {
+    display: table;
+    margin: 0;
+    max-width: 100%;
+}
+article aside p {
+    margin: 5px 4px 3px 4px;
+}
+@media all and (max-width:700px) {
+    article aside {
+        float: initial;
+        margin: 10px auto;
+        max-width: calc(90vw - 100px);
+    }
+}
+
+strong {
+    color: #eb29a0;
+    text-shadow: .5px .5px #0008, .5px -.5px #0008, -.5px .5px #0008, -.5px -.5px #0008, 0px .5px #0008, 0px -.5px #0008, .5px 0px #0008, -.5px 0px #0008;
+    font-weight: initial;
+    letter-spacing: .8px;
+}
+strong>conlang-saia {
+    letter-spacing: 0.5px;
+}
+strong>conlang-saia rt {
+    color: #ab2b5e;
+    text-shadow: initial;
+    letter-spacing: initial;
+}
+
+table {
+    border: 4px solid #d9a659;
+    min-width: 100%;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #ffe3b8;
+    white-space: nowrap;
+}
+table-wrapper {
+    overflow-x: auto;
+    display: block;
+}
+
+td {
+    border: 2px dotted #d9a659;
+    padding: 0 6px;
+}
+
+aside>table-wrapper {
+    margin-left: -6px;
+    width: calc(100% + 12px);
+}
+aside>table-wrapper:first-child {
+    margin-top: -12px;
+}
+aside>table-wrapper:last-child {
+    margin-bottom: -12px;
+}
+
+/* Initial saia that did not parse succesfully */
+failed-saia, to-do {
+    background-color: #ffb8e3;
+    border: 1px solid red;
+    text-overflow: ellipsis;
+    display: inline-block;
+
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: translateY(8px);
+    margin-top: -8px;
+}
+
+failed-saia:hover, failed-saia[open-ele], to-do {
+    display: inline;
+
+    max-width: initial;
+    overflow: initial;
+    white-space: initial;
+    transform: initial;
+    margin-top: initial;
+    line-height: 160%;
+}
+
+to-do::before {
+    content: "TODO: ";
+    font-weight: bold;
+}
+
+/* Unparsed, should only be visible when JS is disabled. */
+human-readable-saia {
+    color: #ab2b5e;
+    font-style: italic;
+}
+
+@media all and (max-width: 1154px) {
+    .nomobile {
+        display: none;
+    }
+}
+@media all and (min-width: 1155px) {
+    .nopc {
+        display: none;
+    }
+
+    saia-dict.nopc {
+        display: flex;
+        visibility: hidden;
+    }
+}
+
+chapter-select {
+    overflow-y: clip;
+    height: 60vh;
+    min-height: 550px;
+    min-width: 100%;
+    max-width: 100%;
+    border-top: 4px solid #d9a659;
+    border-bottom: 4px solid #d9a659;
+    background-color: #ffe3b860;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+chapter-select details {
+    /* First paint is dumb sometimes, so manual fix */
+    min-width: 116px;
+}
+chapter-select details[open] {
+    min-width: 400px;
+}
+
+chapter-select details:first-of-type {
+    margin-left: 100px;
+}
+chapter-select details:last-of-type {
+    margin-right: 100px;
+}
+
+chapter-select summary {
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
+    display: block;
+    font-size: 64px;
+    height: calc(100% + 30px);
+    margin-top: -15px;
+    text-align: left;
+    float: left;
+    border-left: 4px solid #d9a659;
+    border-right: 4px solid #d9a659;
+    transform: rotate(-5deg);
+    background-size: cover;
+    cursor: pointer;
+    user-select: none;
+}
+
+chapter-select summary div {
+    backdrop-filter: blur(10px);
+    color: #ffe3b8;
+    background-color: #ffe3b840;
+}
+
+chapter-select open-details {
+    height: 100%;
+    display: inline-block;
+    padding: 10px 40px 10px 10px;
+    transform: rotate(-5deg)
+}
+
+chapter-select a {
+    display: block;
+    color: #146625;
+    font-size: 26px;
+    text-decoration: none;
+    transform: rotate(5deg);
+    margin-left: -10px;
+    padding-left: 10px;
+    border-bottom: 4px solid #d9a659;
+    width: 50px;
+}
+
+chapter-select a:visited {
+    color: #637c40;
+}
+
+summary::after {
+    counter-increment: chapter;
+    content: counter(chapter, upper-roman);
+    position: fixed;
+    bottom: 60px;
+    left: 0px;
+    color: #ffe3b8;
+    transform: rotate(-85deg);
+    height: 100px;
+    text-align: center;
+    pointer-events: none;
+}
+
+vertical-text {
+    display: block;
+    text-orientation: sideways;
+    writing-mode: vertical-lr;
+    width: 30px;
+    margin: 0 auto;
+}

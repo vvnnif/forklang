@@ -1,0 +1,34 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en-GB" style="height: 100%">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&amp;display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+    <meta name="description" content="Backtick Conlang Reference - Table of Contents">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+    <script src="{{ site.baseurl }}/js/saia.js"></script>
+    <title>Conlang - Table of Contents</title>
+</head>
+<body class="main" style="flex-direction: column; align-items: center; justify-content: center; min-height: 100%; counter-reset: chapter;">
+    <chapter-select>
+        <flex-filler></flex-filler>
+        {% for chapter in site.data.grammar_chapters -%}
+            <details>
+                <summary style='background-image: url("{{ site.baseurl }}/resources/vertical_{{ chapter.header }}")'>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ chapter.chapter_name }}</div>
+                </summary>
+                <open-details>
+                    {% for section in chapter.sections -%}
+                        <a href="{{ site.baseurl }}{{ section.link | replace: '.html', ''}}">
+                            {{ section.name }}
+                        </a>
+                    {% endfor -%}
+                </open-details>
+            </details>
+        {% endfor -%}
+        <flex-filler></flex-filler>
+    </chapter-select>
+</body>

@@ -1,0 +1,11 @@
+collections:
+  grammar:
+    output: true
+
+defaults:
+  - scope:
+      path: "_grammar"
+    values:
+      layout: "default"
+
+baseurl: /backtickconlang

@@ -1,0 +1,75 @@
+- chapter_name: Basics
+  header: header.png
+  sections:
+    - name: Phonetics and Script
+      link: /grammar/phonetics.html
+    - name: Noun Basics
+      link: /grammar/nouns.html
+    - name: Copular Sentences
+      link: /grammar/copula.html
+    - name: Verb Basics
+      link: /grammar/verbs.html
+- chapter_name: Nouns
+  header: header2.png
+  sections:
+    - name: Noun Cases
+      link: /grammar/noun-cases.html
+    - name: The Nominative
+      link: /grammar/nominative.html
+    - name: The Accusative
+      link: /grammar/accusative.html
+    - name: The Dative
+      link: /grammar/dative.html
+    - name: The Genitive
+      link: /grammar/genitive.html
+    - name: The Locative
+      link: /grammar/locative.html
+    - name: The Instrumental
+      link: /grammar/instrumental.html
+    - name: The Causative
+      link: /grammar/causative.html
+    - name: Temporal Nouns
+      link: /grammar/temporal-nouns.html
+- chapter_name: Verbs
+  header: header3.png
+  sections:
+    - name: Verb Voice
+      link: /grammar/verb-voice.html
+    - name: Simple Time
+      link: /grammar/simple-tenses.html
+    - name: Perfect Time
+      link: /grammar/perfect-tenses.html
+    - name: Other tenses
+      link: /grammar/other-tenses.html
+    - name: The Copula
+      link: /grammar/copula-2.html
+- chapter_name: Modifiers
+  header: header4.png
+  sections:
+    - name: Adjectives
+      link: /grammar/adjectives.html
+    - name: More on Adjectives
+      link: /grammar/adjectives-2.html
+    - name: Comparison
+      link: /grammar/comparison.html
+    - name: Adverbs
+      link: /grammar/adverbs.html
+    - name: Nominalisation
+      link: /grammar/nominalisation
+    - name: Demonstratives
+      link: /grammar/demonstratives.html
+    - name: Quantifiers
+      link: /grammar/quantifiers.html
+    - name: Negation with <human-readable-saia>-ànàn-</human-readable-saia>
+      link: /grammar/negation-with-anan.html
+- chapter_name: Sentences
+  header: header5.png
+  sections:
+    - name: Sentence Enders
+      link: /grammar/sentence-enders.html
+    - name: Subsentences
+      link: /grammar/subsentences.html
+    - name: Sentence Nominalisation
+      link: /grammar/sentence-nominalisation.html
+    - name: Connecting Sentences
+      link: /grammar/connectives.html

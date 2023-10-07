@@ -1,0 +1,20 @@
+<nav id="nav">
+    <mobile-toggle id="mobile-dict-close" onClick="toggleOpenEle(this.parentElement)"></mobile-toggle>
+    Chapters
+    <a href="{{ site.baseurl }}/">Table of Contents</a>
+    {% for chapter in site.data.grammar_chapters -%}
+        <details{% if chapter == current_chapter %} open{% endif %}>
+            <summary>{{ chapter.chapter_name }}</summary>
+            {% for section in chapter.sections -%}
+                <a href="{{ site.baseurl }}{{ section.link | replace: '.html', ''}}"{% if section == current_section %} current-page{% endif %}>
+                    {{ section.name }}
+                </a>
+            {% endfor -%}
+        </details>
+    {% endfor -%}
+    <flex-filler></flex-filler>
+    <p class="nomobile">Tools</p>
+    <toggle-dict class="nomobile" onclick="toggleDictionary()">(Dictionary)</toggle-dict>
+    <toggle-ruby class="nomobile" onclick="toggleRuby()">(Toggle Readings)</toggle-ruby>
+</nav>
+<mobile-toggle id="mobile-nav-toggle" onClick="toggleOpenEle(this.previousElementSibling)"></mobile-toggle>

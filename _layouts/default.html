@@ -1,0 +1,74 @@
+{% comment -%}
+This process has four results `current_chapter`, `current_section`, `prev_section`, `next_section`.
+The structure of these can be found in `_data/grammar_chapters.yml`.
+{% endcomment -%}
+{% for chapter in site.data.grammar_chapters -%}
+    {% for section in chapter.sections -%}
+        {% if getting_next_section -%}
+            {% assign next_section = section -%}
+            {% assign getting_next_section = false -%}
+        {% endif -%}
+        {% if page.url == section.link -%}
+            {% assign current_section = section -%}
+            {% assign current_chapter = chapter -%}
+            {% assign prev_section = temp_prev_section -%}
+            {% assign getting_next_section = true -%}
+        {% endif -%}
+        {% assign temp_prev_section = section -%}
+    {% endfor -%}
+{% endfor -%}
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&amp;display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+    <meta name="description" content="Backtick Conlang Reference - {{ current_chapter.name }} - {{ current_section.name }}">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
+    <script src="{{ site.baseurl }}/js/saia.js"></script>
+    <script src="{{ site.baseurl }}/js/dictionary.js"></script>
+    <title>{{ current_chapter.chapter_name }} - {{ current_section.name }}</title>
+</head>
+<body>
+    {% include header.html -%}
+    <div class="main">
+        {% include nav.html -%}
+        <article>
+            {% if prev_section -%}
+                <blockquote><i>Previous lesson: <a href="{{ site.baseurl }}{{ prev_section.link | replace: '.html', '' }}">{{ prev_section.name }}</a>.</i></blockquote>
+            {% endif -%}
+            {% assign output = content 
+                | markdownify
+                | replace: '  ', ''
+                | strip_newlines
+                | replace: '=[', '<human-readable-saia>'
+                | replace: ']=', '</human-readable-saia>'
+                | replace: '[vocab]', '[aside] <p>Vocabulary in this lesson.<br/><i>(See the dictionary for more info.)</i></p>'
+                | replace: '[/vocab]', '[/aside]'
+                | replace: '<p>[aside]', '[aside]<p>'
+                | replace: '[/aside]</p>', '</p>[/aside]'
+                | replace: '[aside]', '<aside>'
+                | replace: '[/aside]', '</aside>'
+                | replace: '[todo]', ' <to-do>'
+                | replace: '[/todo]', '</to-do> '
+                | replace: '<p></p>', ''
+                | replace: '<blockquote><p>Example', '<blockquote example-blockquote><p><strong>Example</strong> '
+                | replace: '<th', '<td'
+                | replace: '</th', '</td'
+                | replace: '<thead', '<tbody'
+                | replace: '</thead', '</tbody'
+                | replace: '</tbody><tbody>', ''
+                | replace: '<table>', '<table-wrapper><table>'
+                | replace: '</table>', '</table></table-wrapper>'
+                | replace: 'href="/grammar/', 'href="ASDFWASD/grammar/'
+                | replace: 'ASDFWASD', site.baseurl -%}
+            {{ output }}
+            {% if next_section -%}
+                <blockquote><i>Next lesson: <a href="{{ site.baseurl }}{{ next_section.link | replace: '.html', '' }}">{{ next_section.name }}</a>.</i></blockquote>
+            {% endif -%}
+        </article>
+        {% include dictionary.html -%}
+    </div>
+</body>
+</html>
