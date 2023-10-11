@@ -51,4 +51,4 @@ What the conjugation and meaning of the arguments are can be found in the built-
 
 > Example
 >
-> Using =[noedhe]= as verb "to hate", you require a nominative for the person who hates, and an optional accusative for the target of this hate. Then =[noedhirào òan meòan]=, meaning "The warrior hates the warrior", has nominative =[oàn]= and accusative =[meoàn]=. See the chapter on [noun cases](/grammar/noun-cases) for more information on these conjugations.
+> Using =[noedhe]= as verb "to hate", you require a nominative for the person who hates, and an optional accusative for the target of this hate. Then =[noedhirào òan reòan]=, meaning "The warrior hates the warrior", has nominative =[oàn]= and accusative =[reoàn]=. See the chapter on [noun cases](/grammar/noun-cases) for more information on these conjugations.
