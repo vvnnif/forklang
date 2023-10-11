@@ -4,7 +4,7 @@
 [todo]This part's for you Finn.[/todo]
 
 # Script
-Saia is usually written from top to bottom, left to right. For better in-lining in English text however, we will write the text left to right, top to bottom, each line rotated 90°. The characters (that we will soon introduce) are simple geometric shapes, connected together. They are a bit reminiscent of medieval and Renaissant alchemical writing. Words are always surrounded by <conlang-saia></conlang-saia> and <conlang-saia></conlang-saia>, and separated by spaces.
+Lhamisài is usually written from top to bottom, left to right. For better in-lining in English text however, we will write the text left to right, top to bottom, each line rotated 90°. The characters (that we will soon introduce) are simple geometric shapes, connected together. They are a bit reminiscent of medieval and Renaissant alchemical writing. Words are always surrounded by <conlang-saia></conlang-saia> and <conlang-saia></conlang-saia>, and separated by spaces.
 
 > Example  
 > We will write for instance =[aa roàn aaroàn]= horizontally instead of what it properly should be, <vertical-text>=[aa roàn aaroàn]=</vertical-text>
