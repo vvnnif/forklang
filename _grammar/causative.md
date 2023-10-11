@@ -2,7 +2,7 @@
 ---
 &nbsp; | **Body** _(Sing)_ | **Body** _(Plu)_ | **Spirit** _(Sing)_ | **Spirit** _(Plu)_ | **Soul** _(Sing)_ | **Soul** _(Plu)_
 ---------|--------------|-------------|-------------|------------|-------------|-----------
-**Caus** | =[-eioe-]=   | =[-ioe-]=   | =[-jheiò-]= | =[-jhiò-]= | =[-aoa-]=   | =[-aia-]=
+**Caus** | =[-be-]=   | =[-bhòi-]=   | =[-gòe-]= | =[-gòi-]= | =[-dha-]=   | =[-dhai-]=
 
 
 # The causative: Why?
@@ -20,7 +20,7 @@ The causative will most of the time be unbound. It denotes a "because" clause. W
 
 > Example
 > 
-> =[zhaa]= has a verb interpretation of `to pray`. As such, =[zhaa **jheiòedheola**]= means "I am praying **because of sadness**". Here, `sadness` is written in the Causative, as the sadness is the cause for prayer. Whether this sadness is the speaker's, general sadness in the population, or something else depends on the context.
+> =[zhaa]= has a verb interpretation of `to pray`. As such, =[zhaa **gòedheola**]= means "I am praying **because of sadness**". Here, `sadness` is written in the Causative, as the sadness is the cause for prayer. Whether this sadness is the speaker's, general sadness in the population, or something else depends on the context.
 
 If there are multiple reasons, multiple causatives can be put one after another in order of decreasing importance.
 
