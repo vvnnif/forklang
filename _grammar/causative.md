@@ -26,6 +26,6 @@ If there are multiple reasons, multiple causatives can be put one after another 
 
 > Example
 > 
-> =[zhaa **jheiòedheola** **ioedhàiqa**]= means "I am praying **because of sadness and the economy**", with the economy being the lesser reason.
+> =[zhaa **gòedheola** **bedhàigòa**]= means "I am praying **because of sadness and the economy**", with the economy being the lesser reason.
 
 [todo]For a sentence-nominalised example, do the section sentence nominalisation. Or perhaps put relevant examples there.[/todo]
