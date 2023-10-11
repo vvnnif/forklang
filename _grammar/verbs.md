@@ -37,10 +37,10 @@ Since verbs are nouns, they are conjugated the same as [temporal nouns](/grammar
 
 &nbsp; | **Past** _(Casual)_ | **Past** _(Polite)_ | **Present** _(Casual)_ | **Present** _(Polite)_ | **Future** _(Casual)_ | **Future** _(Polite)_
 --------------|------------|------------|------------|------------|-----------|------------
-**1st incl.** | =[-ò-]=    | =[-òboa-]= |            | =[-iboa-]= | `n/a`     | `n/a`
-**1st excl.** | =[-òshi-]= | `n/a`      | =[-ishi-]= | `n/a`      | `n/a`     | `n/a`
-**2nd**       | =[-òa-]=   | =[-òmoa-]= | =[-i-]=    | =[-imoa-]= | =[-a-]=   | `n/a`
-**3rd**       | =[-òri-]=  | =[-òroa-]= | =[-iri-]=  | =[-iroa-]= | =[-ari-]= | =[-aroa-]=
+**1st incl.** | =[-ò-]=    | =[-òbòm-]= |            | =[-ishài-]= | `n/a`     | `n/a`
+**1st excl.** | =[-òshà-]=| `n/a`       | =[-ishà-]=| `n/a`      | `n/a`     | `n/a`
+**2nd**       | =[-òa-]=   | =[-òmam-]= | =[-emòa-]=  | =[-emòm-]= | =[-a-]=   | `n/a`
+**3rd**       | =[-òrà-]= | =[-òràm-]=  | =[-irào-]=  | =[-iràm-]= | =[-iarà-]= | =[-iaràm-]=
 
 The attentive reader will notice that these conjugations are exactly the same as the conjugation of [the copula](/grammar/copula). This is not an accident of course. You can interpret this either as the copula turning nouns into verbs by being directly affixed, or the copula being an empty verb and conjugated as such.
 
@@ -51,4 +51,4 @@ What the conjugation and meaning of the arguments are can be found in the built-
 
 > Example
 >
-> Using =[noedhe]= as verb "to hate", you require a nominative for the person who hates, and an optional accusative for the target of this hate. Then =[noedheiri òan meòan]=, meaning "The warrior hates the warrior", has nominative =[oàn]= and accusative =[meoàn]=. See the chapter on [noun cases](/grammar/noun-cases) for more information on these conjugations.
+> Using =[noedhe]= as verb "to hate", you require a nominative for the person who hates, and an optional accusative for the target of this hate. Then =[noedhirào òan meòan]=, meaning "The warrior hates the warrior", has nominative =[oàn]= and accusative =[meoàn]=. See the chapter on [noun cases](/grammar/noun-cases) for more information on these conjugations.
